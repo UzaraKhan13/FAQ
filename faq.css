@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+.title {
+  font-family: sans-serif;
+  color: black;
+  text-align: center;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.tabContainer {
+  width: 100%;
+  height: auto;
+}
+
+.tabContainer .buttonContainer {
+  height: 15%;
+}
+
+.tabContainer .buttonContainer button {
+  width: 25%;
+  height: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  font-family: sans-serif;
+  font-size: 18px;
+  background-color: #d7d4d4;
+}
+
+.tabContainer .buttonContainer button:hover {
+  background-color: #f7d91b;
+}
+
+.tabContainer .tabPanel {
+  height: 80%;
+  width: 76%;
+  padding-left: 20px;
+  background-color: gray;
+  color: white;
+  text-align: left;
+  padding-top: 20px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 15px;
+  display: none;
+  display: inline-block;
+  overflow_scroll: auto;
+}
+
+.accordion a {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 90%;
+  padding: 1rem 3rem 1rem 1rem;
+  color: #aaaeb3;
+  font-size: 1.15rem;
+  font-weight: 200;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.accordion a:hover,
+.accordion a:hover::after {
+  cursor: pointer;
+  color: #ebcd0e;
+}
+
+.accordion a:hover::after {
+  border: 1px solid #ebcd0e;
+}
+
+/*#747070*/
+.accordion a.active {
+  color: #747070;
+  border-bottom: 1px solid #747070;
+}
+
+.accordion a::after {
+  font-family: "Ionicons";
+  content: "\f218";
+  position: absolute;
+  float: right;
+  right: 1rem;
+  font-size: 1rem;
+  color: #747070;
+  padding: 5px;
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid #747070;
+  text-align: center;
+}
+
+.accordion a.active::after {
+  font-family: "Ionicons";
+  content: "\f209";
+  color: #ebcd0e;
+  border: 1px solid white;
+}
+
+.accordion .content {
+  opacity: 0;
+  padding: 0 1rem;
+  max-height: 0;
+  border-bottom: 1px solid #e5e5e5;
+  overflow: hidden;
+  clear: both;
+  -webkit-transition: all 0.2s ease 0.15s;
+  -o-transition: all 0.2s ease 0.15s;
+  transition: all 0.2s ease 0.15s;
+}
+
+.accordion .content p {
+  font-size: 1rem;
+  font-weight: 200;
+  text-align: justify;
+}
+
+.accordion .content.active {
+  opacity: 1;
+  padding: 1rem;
+  max-height: 100%;
+  -webkit-transition: all 0.35s ease 0.15s;
+  -o-transition: all 0.35s ease 0.15s;
+  transition: all 0.35s ease 0.15s;
+}
+
+.tabPanel {
+  padding-left: 10px;
+}
